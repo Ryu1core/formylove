@@ -445,11 +445,16 @@ body {
     color: #fff;
 }
 
-.bunny-modal__bunnies {
-    width: 200px;
-    max-width: 70%;
-    margin: 0 auto 8px;
+.bunny-modal__photo {
     display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 158, 194, 0.4);
+    box-shadow:
+        0 0 30px rgba(255, 95, 158, 0.3),
+        0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .bunny-modal__text {
