@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счётчик любви ♡</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-counter">
+
+    <!-- Тот же фон с частицами -->
+    <div class="bg" id="particles" aria-hidden="true"></div>
+
+    <main class="counter-page">
+        <p class="counter-page__eyebrow">И вот уже сколько мы вместе...</p>
+        <h1 class="counter-page__title">Каждый день с тобой — особенный ❤️</h1>
+
+        <!-- Счётчик: значения подставляет script.js -->
+        <div class="counter" id="counter">
+            <div class="counter__block">
+                <div class="counter__value" id="days">0</div>
+                <div class="counter__label" id="daysLabel">дней</div>
+            </div>
+            <div class="counter__block">
+                <div class="counter__value" id="hours">00</div>
+                <div class="counter__label">часов</div>
+            </div>
+            <div class="counter__block">
+                <div class="counter__value" id="minutes">00</div>
+                <div class="counter__label">минут</div>
+            </div>
+            <div class="counter__block">
+                <div class="counter__value" id="seconds">00</div>
+                <div class="counter__label">секунд</div>
+            </div>
+        </div>
+
+        <p class="love-note">
+            Знаешь, я не знаю, сколько всего прекрасного нас ждёт впереди.
+            Но мне хочется узнавать тебя всё больше, делиться с тобой своими днями,
+            поддерживать тебя и создавать воспоминания, которые останутся с нами надолго.
+            <span class="love-note__heart">♡</span>
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
