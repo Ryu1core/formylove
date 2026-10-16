@@ -134,8 +134,41 @@ function startCounter() {
     setInterval(updateCounter, 1000); // обновление каждую секунду
 }
 
+// ---------- Кнопка-сердечко с обнимашками ----------
+
+function setupHeartModal() {
+    const btn = document.getElementById('heartBtn');
+    const modal = document.getElementById('bunnyModal');
+    if (!btn || !modal) return;
+
+    // Открываем карточку с зайчиками
+    btn.addEventListener('click', () => {
+        modal.hidden = false;
+        // Перезапускаем анимацию появления
+        const card = modal.querySelector('.bunny-modal__card');
+        card.classList.remove('bunny-modal__card--show');
+        void card.offsetWidth; // «перезапуск» CSS-анимации
+        card.classList.add('bunny-modal__card--show');
+    });
+
+    // Закрываем по клику на фон или крестик
+    modal.querySelectorAll('[data-close]').forEach(el => {
+        el.addEventListener('click', () => {
+            modal.hidden = true;
+        });
+    });
+
+    // Закрываем по клавише Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden) {
+            modal.hidden = true;
+        }
+    });
+}
+
 // ---------- Запуск ----------
 
 createParticles();
 setupOpenButton();
 startCounter();
+setupHeartModal();
